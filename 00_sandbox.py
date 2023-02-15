@@ -1,8 +1,10 @@
-# Ask users for a number
-get_num = int(input("Enter an integer: "))
+# get name until an exit code is entered...
 
-# Multiply the number by 5
-times_five = get_num * 5
+name = ""
+while name.lower() != "xxx":
+    name = input("Who are you? ")
+    print(name)
 
-# Output the result
-print("{} times five equals {}".format(get_num, times_five))
+print()
+print("We are done!")
+
