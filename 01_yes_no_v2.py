@@ -6,15 +6,15 @@ while show_instructions.lower() != "xxx":
     show_instructions = input("Have you played this game before? ").lower()
 
     # If they say yes, output "program continues"
-    program_cont = ["yes", "y"]
 
-    # If they say no , output 'display instructions'
-    instructions = ["no", "n"]
 
-    if show_instructions in program_cont:
+    if show_instructions == "no" or "n":
         print("Program continues")
 
-    elif show_instructions in instructions:
+    # If they say no , output 'display instructions'
+
+
+    if show_instruc:
         print("***INSTRUCTIONS***")
 
     # If they say anything else then 'error please enter yes / no'
