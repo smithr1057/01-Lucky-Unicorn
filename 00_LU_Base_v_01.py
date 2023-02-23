@@ -1,6 +1,8 @@
 
 
 # Functions go here...
+
+#  Checks that user response is yes / no.
 def yes_no(question):
     while True:
         response = input(question).lower()
@@ -17,6 +19,7 @@ def yes_no(question):
             print()
 
 
+# Displays instructions <needs editing>
 def instructions():
     print("**** How to Play ****")
     print()
@@ -25,9 +28,10 @@ def instructions():
     return ""
 
 
+# checks users enter an integer between a low and high number
 def num_check(question, low, high):
 
-    error = "Please enter a whole number between 1 and 10\n"
+    error = f"Please enter a whole number between {low} and {high}\n"
 
     while True:
         try:
