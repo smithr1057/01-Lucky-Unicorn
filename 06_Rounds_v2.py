@@ -6,14 +6,14 @@ balance = 5
 rounds_played = 0
 
 play_again = input("Press <Enter> to play...").lower()
-print()
 while play_again == "":
 
     # increase # of rounds played
     rounds_played += 1
 
     # Print round number
-    print(f"*** Round #{rounds_played} ***")
+    print()
+    print("*** Round #{} ***".format(rounds_played))
 
     chosen_num = random.randint(1, 100)
 
@@ -43,13 +43,17 @@ while play_again == "":
             chosen = "zebra"
         balance -= .5
 
-    if balance < 1:
-        play_again = "xxx"
-        print("Sorry you have run out of money")
-        print()
-    else:
-        play_again = input("Press enter to play again or 'xxx' to quit ")
-        print()
+    print(f"You got a {chosen}. Your balance is ${balance:.2f}")
 
-print("Final balance ", balance)
-print("Thanks for playing")
+    if balance < 1:
+        # If balance is too low, exit the game and
+        # output a suitable message
+        play_again = "xxx"
+        print()
+        print("Sorry you have run out of money")
+    else:
+        play_again = input("Press Enter to play again or 'xxx' to quit ")
+
+print()
+print("Thank you for playing")
+
